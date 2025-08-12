@@ -1,6 +1,6 @@
 .form-container{
     /* Box dimensions and positioning */
-    width: 400px; /* Adjust as needed */
+    max-width: 500px; /* Adjust as needed */
     margin: 50px auto; /* Centers the box horizontally and adds space above/below */
     padding: 20px; /* Space inside the box, between content and border */
 
@@ -13,7 +13,7 @@
 
 .table-container {
     /* Box dimensions and positioning */
-    width: 400px; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
     margin: 50px auto; /* Centers the box horizontally and adds space above/below */
     padding: 20px; /* Space inside the box, between content and border */
 
@@ -70,3 +70,22 @@ table, th, td{
 table {
     width: 100%
 }
+
+.flex-container {
+  display: flex;
+  /* Optional: allow items to wrap to a new line */
+  flex-wrap: wrap;
+  /* Set a uniform gap between rows and columns */
+  /* Or specify different gaps for rows and columns */
+   gap:10px; /* 10px row-gap, 30px column-gap*/
+   margin-bottom: 10px
+}
+
+.flex-item {
+  /* Basic styling for visibility */
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+
+}
+

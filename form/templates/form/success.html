@@ -13,17 +13,25 @@
         {% if data %}
          <h1>Submission successful!</h1>
         <table>
+            <div class="flex-container">
             {% if last %}
-            <p>It looks like your name is {{last.name}}.
-            {% if last.age %}
-                You're a {{last.age}} year old
+            <div class="flex-item">
+                <p style="display: inline;"> <strong>Name</strong>: {{last.name}}</p>
+                    {% if last.age %}
+                <p style="display: inline; padding-left: 5px;"><strong>Age</strong>: {{last.age}} </p>
+                {% endif %}
+            </div>
+
+            <div class="flex-item">
+                <p style="display: inline;"><strong>Title</strong>: {{last.title}}</p>
+                    {% if last.hometown %}
+            <p style="display: inline; padding-left: 5px;"><strong>Hometown</strong>: {{last.hometown}} </p>
             {% endif %}
-            {% if last.hometown %}
-                from {{last.hometown}}
+            </div>
+
+
             {% endif %}
-            and your title is {{last.title}}.
-            </p>
-            {% endif %}
+            </div>
         <thead>
             <tr>
                 <th>Name</th>
