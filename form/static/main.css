@@ -1,0 +1,57 @@
+.form-container{
+    /* Box dimensions and positioning */
+    width: 400px; /* Adjust as needed */
+    margin: 50px auto; /* Centers the box horizontally and adds space above/below */
+    padding: 20px; /* Space inside the box, between content and border */
+
+  /* Box appearance */
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.table-container {
+    /* Box dimensions and positioning */
+    width: 400px; /* Adjust as needed */
+    margin: 50px auto; /* Centers the box horizontally and adds space above/below */
+    padding: 20px; /* Space inside the box, between content and border */
+
+    /* Box appearance */
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+form label {
+    display: block; /* Makes labels appear on their own line */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form #id_name, #id_title, #id_hometown {
+    width: 100%;
+}
+
+.submit-button{
+    max-width: 100%;
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #000; /* Light gray border */
+    border-radius: 3px; /* Rounded corners */
+}
+
+form #id_age {
+    max-width: 10%;
+}
+
+table, th, td{
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+table {
+    width: 100%
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+    <meta charset="UTF-8">
+    <title>Submission Successful</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+    <div class="table-container">
+         <h1>Submission successful!</h1>
+    <table>
+            <p>It looks like your name is {{last.name}}.
+            {% if last.age %}
+                You're a {{last.age}} year old
+            {% endif %}
+            {% if last.hometown %}
+                from {{last.hometown}}
+            {% endif %}
+            and your title is {{last.title}}.
+            </p>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Title</th>
+                <th>Hometown</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.hometown }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
