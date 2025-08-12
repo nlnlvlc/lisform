@@ -73,19 +73,17 @@ table {
 
 .flex-container {
   display: flex;
-  /* Optional: allow items to wrap to a new line */
   flex-wrap: wrap;
-  /* Set a uniform gap between rows and columns */
-  /* Or specify different gaps for rows and columns */
    gap:10px; /* 10px row-gap, 30px column-gap*/
-   margin-bottom: 10px
+   margin-bottom: 20px
 }
 
 .flex-item {
-  /* Basic styling for visibility */
-  padding: 0px;
-  margin: 0px;
-  display: inline;
+  display: inline-block;
+  margin: 10px 5px 5px 0px;
 
 }
 
+.sub-head {
+    margin-bottom: 10px
+}

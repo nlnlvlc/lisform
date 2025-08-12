@@ -11,55 +11,49 @@
 
     <div class="table-container">
         {% if data %}
-         <h1>Submission successful!</h1>
+        <h1>Submission successful!</h1>
         <table>
-            <div class="flex-container">
+            <div class="sub-head">
             {% if last %}
-            <div class="flex-item">
-                <p style="display: inline;"> <strong>Name</strong>: {{last.name}}</p>
-                    {% if last.age %}
-                <p style="display: inline; padding-left: 5px;"><strong>Age</strong>: {{last.age}} </p>
+                <p class="flex-item"> <strong>Name</strong>: {{last.name}}</p>
+                {% if last.age %}
+                    <p class="flex-item" ><strong>Age</strong>: {{last.age}} </p>
                 {% endif %}
-            </div>
 
-            <div class="flex-item">
-                <p style="display: inline;"><strong>Title</strong>: {{last.title}}</p>
-                    {% if last.hometown %}
-            <p style="display: inline; padding-left: 5px;"><strong>Hometown</strong>: {{last.hometown}} </p>
+                <p class="flex-item"><strong>Title</strong>: {{last.title}}</p>
+                {% if last.hometown %}
+                    <p class="flex-item" ><strong>Hometown</strong>: {{last.hometown}} </p>
+                {% endif %}
             {% endif %}
             </div>
-
-
-            {% endif %}
-            </div>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Title</th>
-                <th>Hometown</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in data %}
-            <tr>
-                <td>{{ item.name }}</td>
-                <td>{{ item.age }}</td>
-                <td>{{ item.title }}</td>
-                <td>{{ item.hometown }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Title</th>
+                    <th>Hometown</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.age }}</td>
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.hometown }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
         <div>
             <button type="button" class="to-form"><a href="{% url 'form' %}">New Form?</a></button>
         </div>
         {% else %}
 
         <h1>Looks like we've gotten lost!</h1>
-            <div>
-        <button type="button" class="to-form"><a href="{% url 'form' %}">Go To Form</a></button>
-            </div>
+        <div>
+            <button type="button" class="to-form"><a href="{% url 'form' %}">Go To Form</a></button>
+        </div>
         {% endif %}
     </div>
 </body>
