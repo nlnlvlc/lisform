@@ -13,13 +13,13 @@
 
   <div class="form-container">
       <h1>Let's get to know each other!</h1>
-  <form method="post">
+      <form method="post">
 
-    {% csrf_token %}
-    {{ form.as_p }}
+        {% csrf_token %}
+        {{ form.as_p }}
 
-    <input type="submit" value="Submit" class="submit-button">
- </form>
+        <input type="submit" value="Submit" class="submit-button">
+     </form>
   </div>
 
 </body>

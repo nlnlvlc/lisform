@@ -42,6 +42,21 @@ form #id_name, #id_title, #id_hometown {
     border-radius: 3px; /* Rounded corners */
 }
 
+.to-form{
+    max-width: 100%;
+    background-color: #ffffff;
+    margin: 10px auto;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #000; /* Light gray border */
+    border-radius: 3px; /* Rounded corners */
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
 form #id_age {
     max-width: 10%;
 }

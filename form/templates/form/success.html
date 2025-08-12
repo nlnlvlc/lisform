@@ -10,8 +10,10 @@
 <body>
 
     <div class="table-container">
+        {% if data %}
          <h1>Submission successful!</h1>
-    <table>
+        <table>
+            {% if last %}
             <p>It looks like your name is {{last.name}}.
             {% if last.age %}
                 You're a {{last.age}} year old
@@ -21,6 +23,7 @@
             {% endif %}
             and your title is {{last.title}}.
             </p>
+            {% endif %}
         <thead>
             <tr>
                 <th>Name</th>
@@ -40,6 +43,16 @@
             {% endfor %}
         </tbody>
     </table>
+        <div>
+            <button type="button" class="to-form"><a href="{% url 'form' %}">Return To Form</a></button>
+        </div>
+        {% else %}
 
+        <h1>Looks like we've gotten lost!</h1>
+            <div>
+        <button type="button" class="to-form"><a href="{% url 'form' %}">Go To Form</a></button>
+            </div>
+        {% endif %}
+    </div>
 </body>
 </html>

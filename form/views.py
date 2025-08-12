@@ -10,7 +10,7 @@ def home(request):
         if form.is_valid():
             form.save()
 
-            return redirect('form/success.html')
+            return redirect('success/')
     else:
         form = modelForm()
 
@@ -22,3 +22,6 @@ def display_saved_data(request):
     context = {"data": all_data, "last": submitted}
     template = loader.get_template("form/success.html")
     return HttpResponse(template.render(context))
+
+def home_view(request):
+    return  render(request, 'form/home.html')
